@@ -1,0 +1,43 @@
+{
+  "scores": [
+    {
+      "player": "Alex",
+      "ace": "-1",
+      "king": "-1",
+      "queen": "-1",
+      "jack": "-1",
+      "red": "-1",
+      "black": "-1",
+      "total": "30"
+    },
+    {
+      "player": "Jaime",
+      "ace": "-1",
+      "king": "-1",
+      "queen": "-1",
+      "jack": "-1",
+      "red": "-1",
+      "black": "-1",
+      "total": "30"
+    },
+    {
+      "player": "Irene",
+      "ace": "-1",
+      "king": "-1",
+      "queen": "-1",
+      "jack": "-1",
+      "red": "-1",
+      "black": "-1",
+      "total": "25"
+    },{
+      "player": "Belen",
+      "ace": "-1",
+      "king": "-1",
+      "queen": "-1",
+      "jack": "-1",
+      "red": "-1",
+      "black": "-1",
+      "total": "20"
+    }
+  ]
+}
