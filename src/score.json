@@ -2,42 +2,84 @@
   "scores": [
     {
       "player": "Alex",
-      "ace": "-1",
-      "king": "-1",
-      "queen": "-1",
-      "jack": "-1",
-      "red": "-1",
-      "black": "-1",
-      "total": "30"
+      "ace": "1",
+      "king": "2",
+      "queen": "3",
+      "jack": "4",
+      "red": "5",
+      "black": "6"
     },
     {
       "player": "Jaime",
-      "ace": "-1",
-      "king": "-1",
-      "queen": "-1",
-      "jack": "-1",
-      "red": "-1",
-      "black": "-1",
-      "total": "30"
+      "ace": "2",
+      "king": "3",
+      "queen": "4",
+      "jack": "5",
+      "red": "6",
+      "black": "7"
     },
     {
       "player": "Irene",
-      "ace": "-1",
-      "king": "-1",
-      "queen": "-1",
-      "jack": "-1",
-      "red": "-1",
-      "black": "-1",
-      "total": "25"
-    },{
+      "ace": "3",
+      "king": "4",
+      "queen": "5",
+      "jack": "6",
+      "red": "7",
+      "black": "8"
+    },
+    {
       "player": "Belen",
-      "ace": "-1",
-      "king": "-1",
-      "queen": "-1",
-      "jack": "-1",
-      "red": "-1",
-      "black": "-1",
-      "total": "20"
+      "ace": "4",
+      "king": "5",
+      "queen": "6",
+      "jack": "7",
+      "red": "8",
+      "black": "9"
+    },
+    {
+    "player": "Estela",
+    "ace": "4",
+    "king": "5",
+    "queen": "6",
+    "jack": "7",
+    "red": "8",
+    "black": "9"
+    },
+    {
+      "player": "Pedro",
+      "ace": "2",
+      "king": "3",
+      "queen": "4",
+      "jack": "5",
+      "red": "6",
+      "black": "7"
+    },
+    {
+    "player": "Marina",
+    "ace": "24",
+    "king": "6",
+    "queen": "54",
+    "jack": "87",
+    "red": "5",
+    "black": "7"
+    },
+    {
+      "player": "Miguel",
+      "ace": "2",
+      "king": "3",
+      "queen": "4",
+      "jack": "5",
+      "red": "6",
+      "black": "7"
+    },
+    {
+      "player": "Amalia",
+      "ace": "5",
+      "king": "6",
+      "queen": "7",
+      "jack": "8",
+      "red": "9",
+      "black": "10"
     }
   ]
 }

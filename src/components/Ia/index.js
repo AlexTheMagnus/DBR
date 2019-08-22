@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class Ia extends Component {
     render() {
         return (
-            <div className="Ia">
+            <div className="Ia mt-4">
                 <header className="App-header">
                     <h1>Pagina IA</h1>
                 </header>

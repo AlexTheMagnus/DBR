@@ -9,13 +9,13 @@ class Navigation extends Component {
                     <Link to='/' style={{ color: '#DCDCDC' }}>Home</Link>
                 </li>
                 <li className="text-white">
-                    <Link to='/score' style={{ color: '#DCDCDC' }}>Modo Score</Link>
+                    <Link to='/score' style={{ color: '#DCDCDC' }}>Score Mode</Link>
                 </li>
                 <li className="text-white">
-                    <Link to='/player' style={{ color: '#DCDCDC' }}>Modo VS Player</Link>
+                    <Link to='/player' style={{ color: '#DCDCDC' }}>VS Player Mode</Link>
                 </li>
                 <li className="text-white">
-                    <Link to='/ia' style={{ color: '#DCDCDC' }}>Modo VS IA</Link>
+                    <Link to='/ia' style={{ color: '#DCDCDC' }}>VS IA Mode</Link>
                 </li>
             </nav>
         )

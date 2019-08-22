@@ -7,9 +7,14 @@ class Home extends Component {
         return (
             <div className="App">
                 <header className="App-header">
+                    <h1 style={{ color: '#DCDCDC' }}>
+                        <strong>
+                            Welcome to DBR
+                        </strong>
+                    </h1>
                     <img src={logo} className="App-logo" alt="logo" />
-                    <p style={{ color: '#DCDCDC' }}>
-                        Welcome to DBR. "Do a Barrel Roll" is always a good option.
+                    <p style={{ color: '#DCDCDC' }} >
+                        "Do a Barrel Roll" is always a good option
                     </p>
                     <a
                         className="App-link"

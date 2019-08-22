@@ -5,7 +5,7 @@ import React, { Component } from 'react';
 class Page404 extends Component {
     render() {
         return (
-            <div className="Page404">
+            <div className="Page404  mt-4">
                 <header className="App-header">
                     <h1>Pagina Page404</h1>
                 </header>
