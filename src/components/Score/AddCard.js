@@ -43,11 +43,11 @@ class AddCard extends Component {
     render() {
     return (
         <div className="float-left">
-            <form onSubmit={this.handleSubmit} className="row  align-items-start">
+            <form onSubmit={this.handleSubmit} className="row align-items-start">
                 <div className="form-group">
                     <input
                         type="text"
-                        name="PlayerName"
+                        name="player"
                         className="form-control"
                         value={this.state.player}
                         onChange={this.handleInputChange}
