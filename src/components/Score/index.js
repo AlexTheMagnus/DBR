@@ -3,14 +3,34 @@ import React, { Component } from 'react';
 import { scores } from '../../score.json'
 //console.log(score);
 
+import AddCard from './AddCard';
+
 class Score extends Component {
     constructor() {
         super();
         this.state = {
             scores //Es lo mimso que "score: score"
         }
+        this.handleAddCard = this.handleAddCard.bind(this);
+    }
+    //Delete player
+    removeCard(index){
+        this.setState({
+            scores: this.state.scores.filter((j, i) => {
+                return i !== index
+            })
+        })
     }
 
+    //Add player
+    handleAddCard(score) {
+        this.setState({
+            scores: [...this.state.scores, score]
+        })
+    }
+
+
+    //Generate cards
     render() {
         //console.log(this.state.score);
         const scores = this.state.scores.map((score, i) => {
@@ -19,7 +39,10 @@ class Score extends Component {
                     <div className="card mt-4" style={{ background: '#1A1D20' }}>
                         <div className="card-title text-center" style={{ background: '#3a3d41' }}>
                             <div className="card-header" style={{ background: '#1A1D20' }}>
-                                <h3 style={{ color: 'gold' }}><strong>{score.player}</strong></h3>
+                                        <button className="btn btn-danger btn-sm float-right" onClick={this.removeCard.bind(this, i)}>
+                                            X
+                                        </button>
+                                        <h3 style={{ color: 'gold' }}><strong>{score.player}</strong></h3>
                             </div>
                             <h3 style={{ color: 'f1f1f1' }}>Ace: {score.ace}</h3>
                             <h3 style={{ color: 'f1f1f1' }}>King: {score.king}</h3>
@@ -38,12 +61,16 @@ class Score extends Component {
             )
         })
 
-
+        //Score main
         return (
             <div className="Score mt-4">
                 <header className="App-header">
                     <div className="row mt-4" style={{ width: "100%" }}>
-                        <div className="col mt-4"/>
+                        <div className="col mt-4">
+                            <span>
+                                <AddCard onAddCard={this.handleAddCard}></AddCard>
+                            </span>
+                        </div>
                         <div className="col mt-4">
                             <h1 style={{ color: 'gold' }}><strong>Score Mode</strong></h1>
                         </div>
