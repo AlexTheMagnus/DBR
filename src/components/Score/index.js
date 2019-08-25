@@ -4,6 +4,7 @@ import { scores } from '../../score.json'
 //console.log(score);
 
 import AddCard from './AddCard';
+import EditCard from './EditCard';
 
 class Score extends Component {
     constructor() {
@@ -12,6 +13,7 @@ class Score extends Component {
             scores //Es lo mimso que "score: score"
         }
         this.handleAddCard = this.handleAddCard.bind(this);
+        this.handleEditCard = this.handleEditCard.bind(this);
     }
     //Delete player
     removeCard(index){
@@ -20,6 +22,35 @@ class Score extends Component {
                 return i !== index
             })
         })
+    }
+
+    //Edit player
+    handleEditCard(data) {
+        //console.log(data);
+        var cont = 0;
+        var index = 0;
+        var auxdict;
+        this.state.scores.forEach((score) => {
+            if (score.player === data.name) {
+                //console.log(cont); //Calcula el indice
+                //var auxdict = score;
+                auxdict = JSON.stringify(score);
+                auxdict = JSON.parse(auxdict);
+                //console.log("este es ", auxdict); //Checking copy
+                index = cont;
+                this.removeCard(index);
+            }
+            cont++;
+        });
+
+        auxdict[data.side] = data.points;
+        console.log("editado ", auxdict); //Checking edit
+
+        console.log("tras remove ", auxdict); //Checking edit
+        this.handleAddCard(auxdict);
+        console.log("final ", auxdict); //Checking edit
+        //Borrar luego
+        //console.log(this.state.scores);
     }
 
     //Add player
@@ -32,6 +63,7 @@ class Score extends Component {
 
     //Generate cards
     render() {
+
         //console.log(this.state.score);
         const scores = this.state.scores.map((score, i) => {
             return(
@@ -68,7 +100,7 @@ class Score extends Component {
                     <div className="row mt-4" style={{ width: "100%" }}>
                         <div className="col mt-4">
                             <span>
-                                <AddCard onAddCard={this.handleAddCard}></AddCard>
+                                <AddCard onAddCard={this.handleAddCard}/>
                             </span>
                         </div>
                         <div className="col mt-4">
@@ -81,6 +113,9 @@ class Score extends Component {
                         </div>
                     </div>
                     <div className="container">
+                        <div className="col mt-4">
+                            <EditCard onEditCard={this.handleEditCard} estado={this.state.scores}/>
+                        </div>
                         <div className="row mt-4">
                             {scores}
                         </div>
