@@ -15,6 +15,7 @@ class Score extends Component {
         this.handleAddCard = this.handleAddCard.bind(this);
         this.handleEditCard = this.handleEditCard.bind(this);
     }
+
     //Delete player
     removeCard(index){
         this.setState({
@@ -27,30 +28,37 @@ class Score extends Component {
     //Edit player
     handleEditCard(data) {
         //console.log(data);
-        var cont = 0;
-        var index = 0;
         var auxdict;
-        this.state.scores.forEach((score) => {
-            if (score.player === data.name) {
-                //console.log(cont); //Calcula el indice
-                //var auxdict = score;
-                auxdict = JSON.stringify(score);
-                auxdict = JSON.parse(auxdict);
-                //console.log("este es ", auxdict); //Checking copy
-                index = cont;
-                this.removeCard(index);
-            }
-            cont++;
-        });
+        var newindex = this.state.scores.length - 1;
+        console.log("El nuevo indice", newindex);
+
+        //Getting index
+        var index = scores.findIndex(function(findedplayer) {
+            return findedplayer.player === data.name
+        })
+
+        //Copying to an aux variable and modifying it
+        auxdict = JSON.stringify(scores[index]);
+        auxdict = JSON.parse(auxdict);
 
         auxdict[data.side] = data.points;
-        console.log("editado ", auxdict); //Checking edit
+        console.log(this.state);
+        //Deleting old card
+        this.setState({
+            scores: this.state.scores.splice(index, 1)
+        })
+        console.log(this.state);
+        //console.log("editado ", auxdict); //Checking edit
+        //console.log("tras remove ", auxdict); //Checking edit
 
-        console.log("tras remove ", auxdict); //Checking edit
+        //Adding modified card
         this.handleAddCard(auxdict);
-        console.log("final ", auxdict); //Checking edit
+
+        //console.log("final ", auxdict); //Checking edit
         //Borrar luego
         //console.log(this.state.scores);
+
+
     }
 
     //Add player
@@ -65,7 +73,7 @@ class Score extends Component {
     render() {
 
         //console.log(this.state.score);
-        const scores = this.state.scores.map((score, i) => {
+        let scores = this.state.scores.map((score, i) => {
             return(
                 <div className="col-md-3" key={i}>
                     <div className="card mt-4" style={{ background: '#1A1D20' }}>

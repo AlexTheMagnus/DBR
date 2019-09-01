@@ -37,7 +37,7 @@
       "black": "9"
     },
     {
-    "player": "Estela",
+    "player": "Amalia",
     "ace": "4",
     "king": "5",
     "queen": "6",
@@ -46,7 +46,7 @@
     "black": "9"
     },
     {
-      "player": "Pedro",
+      "player": "Marina",
       "ace": "2",
       "king": "3",
       "queen": "4",
@@ -55,7 +55,7 @@
       "black": "7"
     },
     {
-    "player": "Marina",
+    "player": "Estela",
     "ace": "24",
     "king": "6",
     "queen": "54",
@@ -73,7 +73,7 @@
       "black": "7"
     },
     {
-      "player": "Amalia",
+      "player": "Pedro",
       "ace": "5",
       "king": "6",
       "queen": "7",
