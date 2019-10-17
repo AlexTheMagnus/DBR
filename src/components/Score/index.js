@@ -25,41 +25,43 @@ class Score extends Component {
         })
     }
 
-    //Edit player
     handleEditCard(data) {
         //console.log(data);
+        var cont = 0;       //Variable solo usada para debug
+        var index = 0;
         var auxdict;
-        var newindex = this.state.scores.length - 1;
-        console.log("El nuevo indice", newindex);
 
-        //Getting index
-        var index = scores.findIndex(function(findedplayer) {
-            return findedplayer.player === data.name
-        })
+        this.state.scores.forEach((score) => {
+            if (score.player === data.name) {
+                //console.log(cont); //Calcula el indice
+                //var auxdict = score;
+                auxdict = JSON.stringify(score);
+                auxdict = JSON.parse(auxdict);
+                //console.log("este es ", auxdict); //Checking copy
+                cont = index;
+                //index = cont;
 
-        //Copying to an aux variable and modifying it
-        auxdict = JSON.stringify(scores[index]);
-        auxdict = JSON.parse(auxdict);
+                //Deleting old card
+                this.setState({
+                    scores: this.state.scores.splice(index, 1)
+                })
+            }
+            //cont++;
+            index++;
+        });
 
         auxdict[data.side] = data.points;
-        console.log(this.state);
-        //Deleting old card
-        this.setState({
-            scores: this.state.scores.splice(index, 1)
-        })
-        console.log(this.state);
-        //console.log("editado ", auxdict); //Checking edit
-        //console.log("tras remove ", auxdict); //Checking edit
+        console.log("editado ", auxdict); //Checking edit
 
-        //Adding modified card
+        console.log("tras remove ", auxdict); //Checking edit
         this.handleAddCard(auxdict);
-
-        //console.log("final ", auxdict); //Checking edit
+        console.log("final ", auxdict); //Checking edit
         //Borrar luego
+
         //console.log(this.state.scores);
-
-
     }
+
+
 
     //Add player
     handleAddCard(score) {

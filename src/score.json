@@ -55,13 +55,13 @@
       "black": "7"
     },
     {
-    "player": "Estela",
-    "ace": "24",
-    "king": "6",
-    "queen": "54",
-    "jack": "87",
-    "red": "5",
-    "black": "7"
+        "player": "Estela",
+        "ace": "24",
+        "king": "6",
+        "queen": "54",
+        "jack": "87",
+        "red": "5",
+        "black": "7"
     },
     {
       "player": "Miguel",

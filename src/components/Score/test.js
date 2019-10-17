@@ -129,3 +129,71 @@ handleEditCard(data) {
     //Borrar luego
     //console.log(this.state.scores);
 }
+
+
+//Ultimo cambio, hace cosas raras
+handleEditCard(data) {
+    //console.log(data);
+    var auxdict;
+    var newindex = this.state.scores.length - 1;
+    console.log("El nuevo indice", newindex);
+
+    //Getting index
+    var index = scores.findIndex(function(findedplayer) {
+        return findedplayer.player === data.name
+    })
+
+    //Copying to an aux variable and modifying it
+    auxdict = JSON.stringify(scores[index]);
+    auxdict = JSON.parse(auxdict);
+
+    auxdict[data.side] = data.points;
+    console.log(this.state);
+    //Deleting old card
+    this.setState({
+        scores: this.state.scores.splice(index, 1)
+    })
+    console.log(this.state);
+    //console.log("editado ", auxdict); //Checking edit
+    //console.log("tras remove ", auxdict); //Checking edit
+
+    //Adding modified card
+    //this.handleAddCard(auxdict);
+
+    //console.log("final ", auxdict); //Checking edit
+    //Borrar luego
+    //console.log(this.state.scores);
+
+
+}
+
+///////////////////////Peta mucho pero esta bonito el codigo///////////
+//Edit player
+handleEditCard(data) {
+    console.log("data:", data);
+    var auxdict;
+    //var newindex = this.state.scores.length - 1;
+    //console.log("El nuevo indice", newindex);
+
+    //Getting index
+    var index = scores.findIndex(function(findedplayer) {
+        return findedplayer.player === data.name
+    })
+    console.log("El indice a borrar", index);
+
+    //Copying to an aux variable and modifying it
+    auxdict = JSON.stringify(scores[index]);
+    auxdict = JSON.parse(auxdict);
+
+    //Edit points' value with the new value
+    auxdict[data.side] = data.points;
+    console.log(" auxdict editado ", auxdict); //Checking edit
+
+    //Deleting old card
+    this.removeCard(index);
+    console.log("tras remove ", this.state.scores); //Checking edit
+
+    //Adding modified card
+    this.handleAddCard(auxdict);
+    //console.log("añadido nuevo", this.state.scores); //Checking edit
+}
