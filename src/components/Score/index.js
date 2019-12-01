@@ -27,7 +27,7 @@ class Score extends Component {
 
     handleEditCard(data) {
         //console.log(data);
-        var cont = 0;       //Variable solo usada para debug
+        //var cont = 0;       //Variable solo usada para debug
         var index = 0;
         var auxdict;
 
@@ -38,7 +38,7 @@ class Score extends Component {
                 auxdict = JSON.stringify(score);
                 auxdict = JSON.parse(auxdict);
                 //console.log("este es ", auxdict); //Checking copy
-                cont = index;
+                //cont = index;
                 //index = cont;
 
                 //Deleting old card
