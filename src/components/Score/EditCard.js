@@ -1,5 +1,5 @@
-import React, { Component } from "react";
-import { Container, Row, Col, OverlayTrigger, Tooltip } from "react-bootstrap";
+import React, { Component } from 'react';
+import { Container, Row, Col, OverlayTrigger, Tooltip } from 'react-bootstrap';
 
 class EditCard extends Component {
   constructor(props) {
@@ -9,15 +9,15 @@ class EditCard extends Component {
     this.state = {
       value: [],
       name: this.props.estado[0].player,
-      side: "ace",
-      points: "0",
+      side: 'ace',
+      points: '0',
       sides: [
-        { key: 6, face: "ace" },
-        { key: 5, face: "king" },
-        { key: 4, face: "queen" },
-        { key: 3, face: "jack" },
-        { key: 2, face: "red" },
-        { key: 1, face: "black" },
+        { key: 6, face: 'ace' },
+        { key: 5, face: 'king' },
+        { key: 4, face: 'queen' },
+        { key: 3, face: 'jack' },
+        { key: 2, face: 'ten' },
+        { key: 1, face: 'nine' },
       ],
     };
 
@@ -48,9 +48,9 @@ class EditCard extends Component {
       this.props.onEditCard(this.state);
       this.setState({
         name: this.props.estado[0].player,
-        points: "0",
+        points: '0',
       });
-      this.refToPointsInput.current.value = "";
+      this.refToPointsInput.current.value = '';
     }
     //console.log(this.props.score[this.state.name].ace);
   }
@@ -70,17 +70,15 @@ class EditCard extends Component {
 
   render() {
     return (
-      <div className="float-left" style={{ width: "30%" }}>
+      <div className="float-left" style={{ width: '30%' }}>
         <form
           onSubmit={this.handleSubmit}
           className="card"
-          style={{ background: "#3a3d41" }}
-        >
+          style={{ background: '#3a3d41' }}>
           <div
             className="card-title text-center"
-            style={{ background: "#1A1D20" }}
-          >
-            <h3 style={{ color: "gold" }}>
+            style={{ background: '#1A1D20' }}>
+            <h3 style={{ color: 'gold' }}>
               <strong>Add Score</strong>
             </h3>
           </div>
@@ -89,8 +87,7 @@ class EditCard extends Component {
               name="name"
               className="form-control"
               value={this.state.name}
-              onChange={this.handleInputChange}
-            >
+              onChange={this.handleInputChange}>
               {this.props.estado.map((x, y) => (
                 <option key={y}>{x.player}</option>
               ))}
@@ -122,8 +119,7 @@ class EditCard extends Component {
             delay={{ show: 50, hide: 50 }}
             overlay={
               <Tooltip id="editCard-overlay">Just numbers are accepted</Tooltip>
-            }
-          >
+            }>
             <div className="form-group">
               <input
                 type="text"
