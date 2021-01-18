@@ -8,7 +8,7 @@ const KingDiceFace = (props) => (
         id="square"
         fill="white"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         d="M 3.21,1.26
            C 3.21,1.26 21.79,1.26 21.79,1.26
              22.87,1.26 23.74,2.18 23.74,3.33
@@ -25,7 +25,7 @@ const KingDiceFace = (props) => (
         id="k"
         fill="red"
         stroke="white"
-        stroke-width="0.6"
+        strokeWidth="0.6"
         d="M 10.49,5.04
            C 11.62,5.04 12.18,5.47 12.18,6.32
              12.18,7.18 11.62,7.60 10.49,7.60

@@ -8,7 +8,7 @@ const JackDiceFace = (props) => (
         id="square"
         fill="white"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         d="M 3.21,1.26
            C 3.21,1.26 21.79,1.26 21.79,1.26
              22.87,1.26 23.74,2.18 23.74,3.33
@@ -25,7 +25,7 @@ const JackDiceFace = (props) => (
         id="j"
         fill="black"
         stroke="white"
-        stroke-width="0.6"
+        strokeWidth="0.6"
         d="M 17.96,4.87
            C 19.09,4.87 19.65,5.29 19.65,6.14
              19.65,7.00 19.09,7.42 17.96,7.42

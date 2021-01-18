@@ -8,7 +8,7 @@ const TenDiceFace = (props) => (
         id="square"
         fill="white"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         d="M 3.21,1.26
            C 3.21,1.26 21.79,1.26 21.79,1.26
              22.87,1.26 23.74,2.18 23.74,3.33
@@ -25,7 +25,7 @@ const TenDiceFace = (props) => (
         id="ten"
         fill="red"
         stroke="red"
-        stroke-width="1"
+        strokeWidth="1"
         d="M 14.05,9.95
            C 14.05,10.81 13.36,11.50 12.50,11.50
              11.64,11.50 10.95,10.81 10.95,9.95

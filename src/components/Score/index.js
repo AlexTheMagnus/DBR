@@ -86,12 +86,11 @@ class Score extends Component {
               />
             </div>
             <div className="row mt-4">
-              <Grid xs="12" container spacing={2}>
+              <Grid container spacing={2}>
                 {this.state.scores.map((score, i) => {
                   return (
-                    <Grid xs="6" item>
+                    <Grid key={i} xs={6} item>
                       <PlayerCard
-                        key={i}
                         score={score}
                         i={i}
                         onRemoveCard={this.removeCard}

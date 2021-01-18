@@ -8,7 +8,7 @@ const QueenDiceFace = (props) => (
         id="square"
         fill="white"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         d="M 3.21,1.26
            C 3.21,1.26 21.79,1.26 21.79,1.26
              22.87,1.26 23.74,2.18 23.74,3.33
@@ -25,7 +25,7 @@ const QueenDiceFace = (props) => (
         id="q"
         fill="black"
         stroke="white"
-        stroke-width="0.6"
+        strokeWidth="0.6"
         d="M 19.27,10.85
            C 19.27,12.82 18.61,14.54 17.30,15.99
              16.01,17.43 14.32,18.15 12.23,18.15

@@ -8,7 +8,7 @@ const AceDiceFace = (props) => (
         id="square"
         fill="white"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         d="M 3.21,1.26
            C 3.21,1.26 21.79,1.26 21.79,1.26
              22.87,1.26 23.74,2.18 23.74,3.33
@@ -25,7 +25,7 @@ const AceDiceFace = (props) => (
         id="ace"
         fill="black"
         stroke="white"
-        stroke-width="1"
+        strokeWidth="1"
         d="M 19.42,11.46
            C 18.42,9.75 16.38,7.29 12.55,5.01
              12.52,5.00 12.48,5.00 12.45,5.01

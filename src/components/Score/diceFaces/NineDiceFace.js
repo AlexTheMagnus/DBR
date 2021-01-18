@@ -8,7 +8,7 @@ const NineDiceFace = (props) => (
         id="square"
         fill="white"
         stroke="white"
-        stroke-width="1.5"
+        strokeWidth="1.5"
         d="M 3.21,1.26
            C 3.21,1.26 21.79,1.26 21.79,1.26
              22.87,1.26 23.74,2.18 23.74,3.33
@@ -25,7 +25,7 @@ const NineDiceFace = (props) => (
         id="nine"
         fill="black"
         stroke="black"
-        stroke-width="1"
+        strokeWidth="1"
         d="M 14.05,12.50
            C 14.05,12.50 14.05,12.50 14.05,12.50
              14.05,13.36 13.36,14.05 12.50,14.05
