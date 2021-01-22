@@ -1,12 +1,23 @@
-import React from 'react';
+import React, { useState } from 'react';
 import { Avatar, Card, Grid, IconButton } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
 import DiceFace from './diceFaces/DiceFace';
-import avatar from '../../static/images/blueSpadesAvatar.svg';
+import blackSpadesAvatar from '../../static/images/blackSpadesAvatar.svg';
+import blueSpadesAvatar from '../../static/images/blueSpadesAvatar.svg';
+import greenSpadesAvatar from '../../static/images/greenSpadesAvatar.svg';
+import redSpadesAvatar from '../../static/images/redSpadesAvatar.svg';
 
 const PlayerCard = ({ i, score, onRemoveCard }) => {
   const diceFaces = ['ace', 'king', 'queen', 'jack', 'ten', 'nine'];
+  const avatars = [
+    blackSpadesAvatar,
+    blueSpadesAvatar,
+    greenSpadesAvatar,
+    redSpadesAvatar,
+  ];
+
+  const [selectedAvatar, setSelectedAvatar] = useState(i % avatars.length);
 
   return (
     <Card
@@ -17,11 +28,17 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
       }}>
       <Grid container align="center" alignItems="center">
         <Grid item xs={3} style={{ paddingRight: '0.5em' }}>
-          <Avatar src={avatar} style={{ height: '3em', width: '3em' }} />
+          <Avatar
+            onClick={() =>
+              setSelectedAvatar((selectedAvatar + 1) % avatars.length)
+            }
+            src={avatars[selectedAvatar]}
+            style={{ height: '3em', width: '3em' }}
+          />
           <Typography
             variant="h5"
             style={{ color: 'gold', fontWeight: 'bold' }}>
-            {score.player}
+            {score.player.substring(0, 7)}
           </Typography>
         </Grid>
 
