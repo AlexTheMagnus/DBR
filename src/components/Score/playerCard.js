@@ -1,7 +1,10 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { Avatar, Card, Grid, IconButton } from '@material-ui/core';
 import Typography from '@material-ui/core/Typography';
 import CancelRoundedIcon from '@material-ui/icons/CancelRounded';
+import { useSelector, useDispatch } from 'react-redux';
+import { changeAvatar } from '../../actions/';
+
 import DiceFace from './diceFaces/DiceFace';
 import blackSpadesAvatar from '../../static/images/blackSpadesAvatar.svg';
 import blueSpadesAvatar from '../../static/images/blueSpadesAvatar.svg';
@@ -10,6 +13,7 @@ import redSpadesAvatar from '../../static/images/redSpadesAvatar.svg';
 
 const PlayerCard = ({ i, score, onRemoveCard }) => {
   const diceFaces = ['ace', 'king', 'queen', 'jack', 'ten', 'nine'];
+
   const avatars = [
     blackSpadesAvatar,
     blueSpadesAvatar,
@@ -17,7 +21,10 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
     redSpadesAvatar,
   ];
 
-  const [selectedAvatar, setSelectedAvatar] = useState(i % avatars.length);
+  const selectedAvatar = useSelector((state) => state.avatars);
+  const dispatch = useDispatch();
+
+  // const [selectedAvatar, setSelectedAvatar] = useState(i % avatars.length);
 
   return (
     <Card
@@ -30,7 +37,8 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
         <Grid item xs={3} style={{ paddingRight: '0.5em' }}>
           <Avatar
             onClick={() =>
-              setSelectedAvatar((selectedAvatar + 1) % avatars.length)
+              // setSelectedAvatar((selectedAvatar + 1) % avatars.length)
+              dispatch(changeAvatar())
             }
             src={avatars[selectedAvatar]}
             style={{ height: '3em', width: '3em' }}

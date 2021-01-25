@@ -1,0 +1,85 @@
+{
+  "scores": [
+    {
+      "player": "Alex",
+      "ace": "1",
+      "king": "2",
+      "queen": "3",
+      "jack": "4",
+      "ten": "5",
+      "nine": "6"
+    },
+    {
+      "player": "Jaime",
+      "ace": "2",
+      "king": "3",
+      "queen": "4",
+      "jack": "5",
+      "ten": "6",
+      "nine": "7"
+    },
+    {
+      "player": "Irene",
+      "ace": "3",
+      "king": "4",
+      "queen": "5",
+      "jack": "6",
+      "ten": "7",
+      "nine": "8"
+    },
+    {
+      "player": "Belen",
+      "ace": "4",
+      "king": "5",
+      "queen": "6",
+      "jack": "7",
+      "ten": "8",
+      "nine": "9"
+    },
+    {
+    "player": "Amalia",
+    "ace": "4",
+    "king": "5",
+    "queen": "6",
+    "jack": "7",
+    "ten": "8",
+    "nine": "9"
+    },
+    {
+      "player": "Marina",
+      "ace": "2",
+      "king": "3",
+      "queen": "4",
+      "jack": "5",
+      "ten": "6",
+      "nine": "7"
+    },
+    {
+        "player": "Estela",
+        "ace": "24",
+        "king": "6",
+        "queen": "54",
+        "jack": "87",
+        "ten": "5",
+        "nine": "7"
+    },
+    {
+      "player": "Miguel",
+      "ace": "2",
+      "king": "3",
+      "queen": "4",
+      "jack": "5",
+      "ten": "6",
+      "nine": "7"
+    },
+    {
+      "player": "Pedro",
+      "ace": "5",
+      "king": "6",
+      "queen": "7",
+      "jack": "8",
+      "ten": "9",
+      "nine": "10"
+    }
+  ]
+}
