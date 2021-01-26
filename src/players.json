@@ -1,0 +1,95 @@
+{
+  "players": [
+    {
+      "name": "Alex",
+      "avatar": 0,
+      "score":
+        {
+          "ace": 1,
+          "king": 2,
+          "queen": 3,
+          "jack": 4,
+          "ten": 5,
+          "nine": 6
+        }
+    },
+    {
+      "name": "Jaime",
+      "avatar": 1,
+      "score": 
+        {
+          "ace": 2,
+          "king": 3,
+          "queen": 4,
+          "jack": 5,
+          "ten": 6,
+          "nine": 7
+        }
+    },
+    {
+      "name": "Irene",
+      "avatar": 2,
+      "score":
+        {
+          "ace": 1,
+          "king": 2,
+          "queen": 3,
+          "jack": 4,
+          "ten": 5,
+          "nine": 6
+        }
+    },
+    {
+      "name": "Belen",
+      "avatar": 3,
+      "score":
+        {
+          "ace": 1,
+          "king": 2,
+          "queen": 3,
+          "jack": 4,
+          "ten": 5,
+          "nine": 6
+        }
+    },
+    {
+      "name": "Amalia",
+      "avatar": 0,
+      "score":
+        {
+          "ace": 1,
+          "king": 2,
+          "queen": 3,
+          "jack": 4,
+          "ten": 5,
+          "nine": 6
+        }
+    },
+    {
+      "name": "Marina",
+      "avatar": 1,
+      "score":
+        {
+          "ace": 1,
+          "king": 2,
+          "queen": 3,
+          "jack": 4,
+          "ten": 5,
+          "nine": 6
+        }
+    },
+    {
+      "name": "Estela",
+      "avatar": 2,
+      "score":
+        {
+          "ace": 1,
+          "king": 2,
+          "queen": 3,
+          "jack": 4,
+          "ten": 5,
+          "nine": 6
+        }
+    }
+  ]
+}

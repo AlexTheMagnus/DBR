@@ -11,7 +11,7 @@ import blueSpadesAvatar from '../../static/images/blueSpadesAvatar.svg';
 import greenSpadesAvatar from '../../static/images/greenSpadesAvatar.svg';
 import redSpadesAvatar from '../../static/images/redSpadesAvatar.svg';
 
-const PlayerCard = ({ i, score, onRemoveCard }) => {
+const PlayerCard = ({ i, onRemoveCard }) => {
   const diceFaces = ['ace', 'king', 'queen', 'jack', 'ten', 'nine'];
 
   const avatars = [
@@ -21,10 +21,17 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
     redSpadesAvatar,
   ];
 
-  const selectedAvatar = useSelector((state) => state.avatars);
-  const dispatch = useDispatch();
+  function totalPoints() {
+    var total = 0;
 
-  // const [selectedAvatar, setSelectedAvatar] = useState(i % avatars.length);
+    for (var diceFace in diceFaces) {
+      total += player.score[diceFaces[diceFace]];
+    }
+    return total;
+  }
+
+  const player = useSelector((state) => state.players[i]);
+  const dispatch = useDispatch();
 
   return (
     <Card
@@ -36,17 +43,14 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
       <Grid container align="center" alignItems="center">
         <Grid item xs={3} style={{ paddingRight: '0.5em' }}>
           <Avatar
-            onClick={() =>
-              // setSelectedAvatar((selectedAvatar + 1) % avatars.length)
-              dispatch(changeAvatar())
-            }
-            src={avatars[selectedAvatar]}
+            onClick={() => dispatch(changeAvatar(i, avatars.length))}
+            src={avatars[player.avatar]}
             style={{ height: '3em', width: '3em' }}
           />
           <Typography
             variant="h5"
             style={{ color: 'gold', fontWeight: 'bold' }}>
-            {score.player.substring(0, 7)}
+            {player.name.substring(0, 7)}
           </Typography>
         </Grid>
 
@@ -58,13 +62,7 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
                 color: 'white',
                 fontWeight: 'bold',
               }}>
-              {'Puntos: '}
-              {parseInt(score.ace, 10) +
-                parseInt(score.king, 10) +
-                parseInt(score.queen, 10) +
-                parseInt(score.jack, 10) +
-                parseInt(score.ten, 10) +
-                parseInt(score.nine, 10)}
+              {'Puntos: ' + totalPoints()}
             </Typography>
           </Grid>
 
@@ -95,7 +93,7 @@ const PlayerCard = ({ i, score, onRemoveCard }) => {
                         color: 'white',
                         textTransform: 'capitalize',
                       }}>
-                      {score[diceFace]}
+                      {player.score[diceFace]}
                     </Typography>
                   </Grid>
                 </Grid>

@@ -1,10 +1,10 @@
 import { combineReducers } from 'redux';
 import diceFacesReducer from './diceFaces';
-import scoreReducer from './score';
+import playersReducer from './players';
 
 const allReducersCombined = combineReducers({
   diceFaces: diceFacesReducer,
-  scores: scoreReducer,
+  players: playersReducer,
 });
 
 export default allReducersCombined;

@@ -1,7 +1,7 @@
 {
   "scores": [
     {
-      "player": "Alex",
+      "player": "Manolo",
       "ace": "1",
       "king": "2",
       "queen": "3",
@@ -62,24 +62,6 @@
         "jack": "87",
         "ten": "5",
         "nine": "7"
-    },
-    {
-      "player": "Miguel",
-      "ace": "2",
-      "king": "3",
-      "queen": "4",
-      "jack": "5",
-      "ten": "6",
-      "nine": "7"
-    },
-    {
-      "player": "Pedro",
-      "ace": "5",
-      "king": "6",
-      "queen": "7",
-      "jack": "8",
-      "ten": "9",
-      "nine": "10"
     }
   ]
 }
